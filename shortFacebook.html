@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>welcome to Facebook using Javascripts</h1>
+
+    <script>
+        let database =  [
+            {
+             username: 'alexandre',
+             password:'alex',
+            }
+    ]
+    let status = [
+        {
+          name:'papi',
+          status: 'I want 50k subscribers',
+        },
+        {
+        name: 'Nkurunziza',
+        status: 'I will help inversion to get 50k subscriber'
+        }
+    ]
+        const username = prompt('Enter your username')
+        const password = prompt('Enter a password')
+      
+        const login = (user, pass) =>{
+            if(user === database[0].username && pass === 
+            database[0].password){
+
+                for(let value of status){
+                    console.log(value)
+                }
+
+            }
+            else{
+                alert('please enter your real password and username!')
+            }
+        }
+        login(username, password)
+    </script>
+</body>
+</html>

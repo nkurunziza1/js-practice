@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input field</title>
+    <style type="text/css">
+     .hello{
+        cursor: pointer;
+        margin:0;
+
+     }
+    </style>
+</head>
+<body>
+    <div>
+        <label for="">Name</label>
+        <input type="text" id="name">
+        <br>
+        <label for="">Password</label>
+        <input type="password" id="password">
+        <button id="btn">create</button>
+    </div>
+    <div id="container">
+
+    </div>
+    <script>
+        const name = document.getElementById('name')
+        const password = document.getElementById('password').value
+        const container = document.getElementById('container')
+        const button= document.getElementById('btn')
+        button.addEventListener('click', create)
+
+        function create(){
+            var head = document.createElement('')
+            head.classList.add('hello')
+            container.appendChild(head);
+            head.innerText = name.value;
+            name.value ='';
+         head.addEventListener('click',()=> head.style.textDecoration='line-through')
+           
+        }
+    </script>
+</body>
+
+</html>
